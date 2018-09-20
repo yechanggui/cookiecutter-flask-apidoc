@@ -1,4 +1,4 @@
-Flask==0.10.1
+Flask==1.0.2
 
 # Flask Extensions
 Flask-Assets==0.10
@@ -8,6 +8,7 @@ Flask-Login==0.2.11
 Flask-SQLAlchemy==2.0
 Flask-Script==2.0.5
 Flask-WTF==0.11
+flask-apidoc==1.1.2
 
 # Other
 itsdangerous==0.24

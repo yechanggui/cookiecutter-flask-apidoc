@@ -7,7 +7,7 @@ __version__ = '{{cookiecutter.version}}'
 
 from flask import Flask
 from webassets.loaders import PythonLoader as PythonAssetsLoader
-
+from flask_apidoc import ApiDoc
 from {{cookiecutter.repo_name}}.controllers.main import main
 from {{cookiecutter.repo_name}} import assets
 from {{cookiecutter.repo_name}}.models import db
@@ -35,6 +35,7 @@ def create_app(object_name):
     app = Flask(__name__)
 
     app.config.from_object(object_name)
+    doc = ApiDoc(app=app,url_path='/apidoc')
 
     # initialize the cache
     cache.init_app(app)
